@@ -16,6 +16,7 @@
             android:background="#1CA3E5">
 
             <FrameLayout
+                android:id="@+id/back"
                 android:layout_width="80dp"
                 android:layout_height="match_parent">
 
@@ -31,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="38dp"
                     android:text="返回"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
@@ -42,11 +43,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="服务"
+                android:text="实时监控"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
         </RelativeLayout>
 
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 </layout>

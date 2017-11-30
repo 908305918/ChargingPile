@@ -1,11 +1,13 @@
 package com.cms.charging.app.main.mine;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.GridLayoutHelper;
 import com.cms.charging.R;
+import com.cms.charging.app.detail.DetailActivity;
 import com.cms.charging.common.vlayout.BaseDelegateAdapter;
 import com.cms.charging.common.vlayout.ViewHolder;
 import com.squareup.picasso.Picasso;
@@ -30,10 +32,36 @@ public class EntranceAdapter extends BaseDelegateAdapter {
     }
 
     @Override
-    public void convert(ViewHolder holder, int position, int viewType) {
+    public void convert(ViewHolder holder, final int position, int viewType) {
         holder.setText(R.id.entrance_text, TITLES[position]);
         ImageView imageView = holder.findView(R.id.entrance_image);
         imageView.setImageResource(IMG_IDS[position]);
+
+        holder.getConvertView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (position) {
+                    case 0:
+                        DetailActivity.start(mContext, "实时监控", R.drawable.img_1);
+                        break;
+                    case 1:
+                        DetailActivity.start(mContext, "谐波参数", R.drawable.img_2);
+                        break;
+                    case 2:
+                        DetailActivity.start(mContext, "电网质量", R.drawable.img_3);
+                        break;
+                    case 3:
+                        DetailActivity.start(mContext, "电度查询", R.drawable.img_4);
+                        break;
+                    case 4:
+                        DetailActivity.start(mContext, "运行日志", 0);
+                        break;
+                    case 5:
+                        DetailActivity.start(mContext, "系统日志", 0);
+                        break;
+                }
+            }
+        });
     }
 
     @Override
