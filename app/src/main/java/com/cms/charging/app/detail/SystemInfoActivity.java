@@ -10,13 +10,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.cms.charging.R;
+import com.cms.charging.app.base.BaseActivity;
 import com.cms.charging.databinding.SysInfoActivityBinding;
 
 /**
  * Created by WD on 2017/11/30.
  */
 
-public class SystemInfoActivity extends AppCompatActivity {
+public class SystemInfoActivity extends BaseActivity {
     private SysInfoActivityBinding mBinding;
 
     @Override

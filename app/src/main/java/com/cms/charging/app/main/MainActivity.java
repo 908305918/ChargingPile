@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.cms.charging.R;
+import com.cms.charging.app.base.BaseActivity;
+import com.cms.charging.app.main.home.HomeFragment;
 import com.cms.charging.app.main.mine.MineFragment;
 import com.cms.charging.app.main.service.ServiceFragment;
 import com.cms.charging.app.main.settings.SettingFragment;
@@ -16,7 +18,7 @@ import com.cms.charging.databinding.MainActivityBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     private View[] TAB_VIEWS = new View[4];
     private MainActivityBinding mBinding;
     private List<Fragment> mFragmentList;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
 
             mFragmentList = new ArrayList<>();
-            mFragmentList.add(new Fragment());
+            mFragmentList.add(new HomeFragment());
             mFragmentList.add(new MineFragment());
             mFragmentList.add(new ServiceFragment());
             mFragmentList.add(new SettingFragment());

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 
 import com.cms.charging.R;
+import com.cms.charging.app.base.BaseActivity;
 import com.cms.charging.databinding.DetailActivityBinding;
 import com.squareup.picasso.Picasso;
 
@@ -16,7 +17,7 @@ import com.squareup.picasso.Picasso;
  * Created by WD on 2017/11/30.
  */
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity extends BaseActivity {
     private DetailActivityBinding mBinding;
 
     @Override
