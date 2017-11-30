@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:text="主页"
                     android:textColor="@color/tab_text_color"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
 
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:text="我的"
                     android:textColor="@color/tab_text_color"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:text="服务"
                     android:textColor="@color/tab_text_color"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:text="设置"
                     android:textColor="@color/tab_text_color"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 

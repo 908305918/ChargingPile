@@ -1,6 +1,7 @@
 package com.cms.charging.app.main.mine;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -8,8 +9,10 @@ import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.GridLayoutHelper;
 import com.cms.charging.R;
 import com.cms.charging.app.detail.DetailActivity;
+import com.cms.charging.app.detail.SystemInfoActivity;
 import com.cms.charging.common.vlayout.BaseDelegateAdapter;
 import com.cms.charging.common.vlayout.ViewHolder;
+import com.cms.charging.databinding.SysInfoActivityBinding;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -57,7 +60,8 @@ public class EntranceAdapter extends BaseDelegateAdapter {
                         DetailActivity.start(mContext, "运行日志", 0);
                         break;
                     case 5:
-                        DetailActivity.start(mContext, "系统日志", 0);
+                        Intent intent = new Intent(mContext, SystemInfoActivity.class);
+                        mContext.startActivity(intent);
                         break;
                 }
             }

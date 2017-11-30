@@ -6,6 +6,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 
 import com.cms.charging.R;
 import com.cms.charging.databinding.DetailActivityBinding;
@@ -31,7 +32,8 @@ public class DetailActivity extends AppCompatActivity {
             int imgId = getIntent().getIntExtra("image", 0);
 
             mBinding.title.setText(title);
-            mBinding.image.setImageResource(imgId);
+            DisplayMetrics metrics = getResources().getDisplayMetrics();
+            Picasso.with(this).load(imgId).resize(metrics.widthPixels, metrics.heightPixels-(int)(45*metrics.density)).into(mBinding.image);
         } catch (Exception e) {
             e.printStackTrace();
         }
