@@ -22,7 +22,7 @@ import com.squareup.picasso.Picasso;
 public class EntranceAdapter extends BaseDelegateAdapter {
     private final static int[] IMG_IDS = new int[]{R.drawable.icon_mine_1, R.drawable.icon_mine_2,
             R.drawable.icon_mine_3, R.drawable.icon_mine_4, R.drawable.icon_mine_5, R.drawable.icon_mine_6};
-    private final static String[] TITLES = new String[]{"实时监控", "谐波参数", "电网质量", "电度查询", "运行日志", "系统日志"};
+    private final static String[] TITLES = new String[]{"实时监控", "谐波参数", "电网质量", "电度查询", "运行日志", "系统信息"};
 
 
     public EntranceAdapter(Context context) {
