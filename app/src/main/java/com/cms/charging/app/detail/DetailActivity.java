@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 import com.cms.charging.R;
 import com.cms.charging.app.base.BaseActivity;
@@ -28,13 +29,19 @@ public class DetailActivity extends BaseActivity {
     }
 
     private void initViews() {
+        mBinding.back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         try {
             String title = getIntent().getStringExtra("title");
             int imgId = getIntent().getIntExtra("image", 0);
 
             mBinding.title.setText(title);
             DisplayMetrics metrics = getResources().getDisplayMetrics();
-            Picasso.with(this).load(imgId).resize(metrics.widthPixels, metrics.heightPixels-(int)(45*metrics.density)).into(mBinding.image);
+            Picasso.with(this).load(imgId).resize(metrics.widthPixels, metrics.heightPixels - (int) (45 * metrics.density)).into(mBinding.image);
         } catch (Exception e) {
             e.printStackTrace();
         }

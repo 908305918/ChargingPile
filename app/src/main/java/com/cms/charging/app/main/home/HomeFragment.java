@@ -101,12 +101,14 @@ public class HomeFragment extends BaseFragmnet {
 
             @Override
             public void convert(ViewHolder holder, int position, int viewType) {
-                ImageView imageView = holder.findView(R.id.entrance_image);
-                imageView.setImageResource(IMG_IDS[position]);
-                holder.setText(R.id.entrance_text1, TITLES[position]);
-                holder.setText(R.id.entrance_text2, TEXTS[position]);
+                if(position<5){
+                    ImageView imageView = holder.findView(R.id.entrance_image);
+                    imageView.setImageResource(IMG_IDS[position]);
+                    holder.setText(R.id.entrance_text1, TITLES[position]);
+                    holder.setText(R.id.entrance_text2, TEXTS[position]);
+                }
 
-                if (position < 3) {
+                if (position < 6) {
                     holder.setVisibility(R.id.bottom, View.VISIBLE);
                 } else {
                     holder.setVisibility(R.id.bottom, View.GONE);
@@ -122,7 +124,7 @@ public class HomeFragment extends BaseFragmnet {
 
             @Override
             public LayoutHelper onCreateLayoutHelper() {
-                GridLayoutHelper helper = new GridLayoutHelper(3, 5);
+                GridLayoutHelper helper = new GridLayoutHelper(3, 6);
                 helper.setMargin(0, 0, 0, 0);
                 helper.setAutoExpand(false);
                 return helper;
