@@ -45,7 +45,7 @@ public class SystemInfoActivity extends BaseActivity {
             }
         };
         mAdapter.addData("软件信息：VIP-CDZ-9001");
-        mAdapter.addData("软件版本：");
+        mAdapter.addData("软件版本：V1.00");
         mAdapter.addData("校验码：9507");
         mAdapter.addData("杭州继保南瑞电子科技有限公司");
         mAdapter.addData("www.hznrkj.com");
